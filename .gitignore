@@ -1,0 +1,6 @@
+# Exclude database credentials
+app/db.php
+# Exclude OS junk files
+.DS_Store
+Thumbs.db
+*.env
