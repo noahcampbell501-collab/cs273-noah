@@ -6,7 +6,7 @@
 **Instructor:** Amber Speer
 ## Project Domain
 ### Mission Statement
-To organize and abstract magic spells for Dungeons and Dragons players.
+The mission of the database is to organize and abstract magic spells for Dungeons and Dragons players.
 ### Objectives
 - Organize each spell into its respective class
 - Abstract spells so that they are more easily accessed for both players and DMs
