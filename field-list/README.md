@@ -10,6 +10,7 @@
 | Materials | Lists objects for spell | Physical objects required for spells |
 | Verbal | Whether a spell requires magic words |-|
 | Somatic | Whether a spell requires magic motions |-|
+| Concentration | Does this spell require your attention? | When casting a spell with Concentration, you can't cast another spell with that trait |
 | Duration | How long the spell lasts? |-|
 | CastingTime | How long the spell takes to prepare? | Game related responses. In turn specification? |
 | Damage | How much damage does the spell in it's base form deal? | Damage isn't everything. Find upcast response |
@@ -28,4 +29,4 @@
 | Field | Equation |
 |---|---|
 | TotalDamage | (Damage + (UpcastDamage(LevelCast - Level)) |
-| Components | (Materials + Verbal + Somatic) |
+| Components | (Materials + Verbal + Somatic + Concentration) |
