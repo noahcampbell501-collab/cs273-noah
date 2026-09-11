@@ -1,6 +1,7 @@
 # Phase 2 - Field List
+
 | Field | What for | Notes / Possible problems |
-|...|...|...|
+|---|---|---|
 | SpellID | Unique identifier | Not applied by WOTC, so randomly assigned in order of use- this system sucks |
 | Spell Name | More easily recognized | Spell names are default ID |
 | Level | Organizes spells by strength | Address Upcasting |
