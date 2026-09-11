@@ -12,7 +12,7 @@
 | Somatic | Whether a spell requires magic motions |-|
 | Duration | How long the spell lasts? |-|
 | CastingTime | How long the spell takes to prepare? | Game related responses. In turn specification? |
-| Damage | How much damage does the spell deal? | Damage isn't everything. Find upcast response |
+| Damage | How much damage does the spell in it's base form deal? | Damage isn't everything. Find upcast response |
 | DamageType | What kind of damage will we deal if any? |-|
 | Range | How far can the spell reach? | Range typically doesn't change when upcast |
 | SpellShape | What kind of shape does the spell cover? | Some spells, like Fireball, cover a sphere of space, while others, like Lightning Bolt, go in a straight line |
@@ -22,3 +22,10 @@
 | UpcastDesc | What about the sell changes when upcast? | Sometimes the changes aren't in damage, but in properties |
 | SpellType | Determines the purpose of the spell | Not an official attribute in the game, but something should determine what spells are offensive, defensive, or utility |
 | Book | Where does the spell come from? | What Dungeons and Dragons book does the spell originate from |
+| LevelCast | What level spell slot is used? | This shouldn't be here, because it can't be stored. You can cast a spell with any slot higher than it's base, but I need it to calculate TotalDamage |
+
+## Calculated Fields
+| Field | Equation |
+|---|---|
+| TotalDamage | (Damage + (UpcastDamage(LevelCast - Level)) |
+| Components | (Materials + Verbal + Somatic) |
