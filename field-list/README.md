@@ -72,8 +72,8 @@
 |---|---|---|
 | CSID | Unique identifier for Castable spells | Required, but not very helpful
 | ClassID | Foreign key to relate classes | I wish that it was more obvious the name of the class |
-| SpellID | Foreign key to relate classes | The spell that can be cast by the class |
-| BookID | Foreign key to relate classes | This will determine what exact book allows the class to cast this spell. Usually the origin of the spell or new class. 
+| SpellID | Foreign key to relate spells | The spell that can be cast by the class |
+| BookID | Foreign key to relate books | This will determine what exact book allows the class to cast this spell. Usually the origin of the spell or new class. 
 
 ## Calculated Fields
 | Field | Equation |
