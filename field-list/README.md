@@ -30,6 +30,7 @@
 | Casting level progression | How often do they level up in spells? | Some casters level up in spells much faster than others. This will track that progression |
 
 ## Spell table
+| Field | What for | Notes / Possible problems |
 |---|---|---|
 | SpellID | Unique identifier | Not applied by WOTC, so randomly assigned in order of use- this system sucks |
 | Spell Name | More easily recognized | Spell names are default ID |
@@ -52,6 +53,7 @@
 | Description | What does the spell do? | This one is applicaple to each spell, and will undoubtably be the longest portion |
 
 ## Class Table
+| Field | What for | Notes / Possible problems |
 |---|---|---|
 | ClassID | Primary key for the Class table | Classes determine what spells you are allowed to learn |
 | ClassName | The name of any given class or subclass | Sometimes subclasses can learn spells that they normally wouldn't be able to. I'll just list all of the outliers |
@@ -60,11 +62,13 @@
 
 
 ## Book Table
+| Field | What for | Notes / Possible problems |
 |---|---|---|
 | BookID | Primary key for the Book table | What Dungeons and Dragons book does the spell originate from |
 | BookName | The name of the book associated with the key | This should be in the spell table as well, but we need it as a foreign key |
 
 ## Castable Spells table
+| Field | What for | Notes / Possible problems |
 |---|---|---|
 | CSID | Unique identifier for Castable spells | Required, but not very helpful
 | ClassID | Foreign key to relate classes | I wish that it was more obvious the name of the class |
