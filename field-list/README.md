@@ -57,9 +57,16 @@
 |---|---|---|
 | ClassID | Primary key for the Class table | Classes determine what spells you are allowed to learn |
 | ClassName | The name of any given class or subclass | Sometimes subclasses can learn spells that they normally wouldn't be able to. I'll just list all of the outliers |
-| LeveltoCastingLevel | How often do they level up in spells? | Some casters level up in spells much faster than others. This will track that progression |
 | ClassType | Determines whether this is a class or a subclass | Sometimes a class that isn't supposed to cast very many spells gets a subclass that allows them to cast spells. This should be clarified, so that you don't choose a normal knight, not grab a minor in fire, and find yourself unable shoot lasers when it's time to play. 
 
+## Leveling table
+| Field | What for | Notes / Possible problems |
+|---|---|---|
+| LVID | Primary key for the Leveling table | This will track the spellcasting progression for classes |
+| ClassID | Foreign key from Class table | Specifies what class is being described |
+| ClassLV | Specifies what the class level is | The higher your class level, the higher a level you can cast spells at |
+| HighestLV | Names the highest level spell castable at this class level | The level of spell is never equivalent to the level of the spell slot, besides 1st |
+| SpellsKnown | Number of spells known at this class level | You could exclusively learn 1st level spells, and then theoretically learn them all by 20th level |
 
 ## Book Table
 | Field | What for | Notes / Possible problems |
