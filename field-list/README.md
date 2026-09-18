@@ -87,3 +87,12 @@
 |---|---|
 | TotalDamage | (Damage + (UpcastDamage(LevelCast - Level)) |
 | Components | (Materials + Verbal + Somatic + Concentration) |
+
+## Reflection
+The only multipart field ended up turning into a calculated field, which isn’t stored. “Components” is a single value in D&D that covers the Verbal, Somatic, and Material fields. 
+
+Class would have been multivalued on the spell table, so I changed it to its own table. The leveling table was almost a field in the class table, before I realized that that was freakin’ stupid. The castable spells table is the linchpin that the whole database relies on. There were a lot of multivalued tables.
+
+Like I said earlier, the leveling table was a part of the class table, as you can probably see a lot of overlap between the class table and leveling. Ultimately, they had to have a divorce for the safety of their children. 
+
+The TotalDamage field is calculated through the adding the base damage to the upcast damage rate, multiplied by the level that the spell is cast minus the base level. 
