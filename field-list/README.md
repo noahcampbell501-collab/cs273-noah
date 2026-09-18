@@ -36,7 +36,7 @@
 | Spell Name | More easily recognized | Spell names are default ID |
 | Level | Organizes spells by strength | Address Upcasting |
 | School | Which school of magic does this spell belong to? | There are 9 schools, and they aren't restricted by class |
-| Effect | Determines the purpose of the spell | Not an official attribute in the game, but something should determine what spells are offensive, defensive, or utility |
+| Effect | One word description of purpose | Quick description of spell purpose without needing to do math or logic |
 | SaveDC | What kind of Saving throw does the opponent roll? | DC means "Difficulty class" |
 | Materials | Lists objects for spell | Physical objects required for spells |
 | Verbal | Whether a spell requires magic words |-|
