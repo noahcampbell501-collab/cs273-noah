@@ -30,6 +30,7 @@
 | Casting level progression | How often do they level up in spells? | Some casters level up in spells much faster than others. This will track that progression |
 
 ## Spell table
+The Main table, filled with most data on spells.
 | Field | What for | Notes / Possible problems |
 |---|---|---|
 | SpellID | Unique identifier | Not applied by WOTC, so randomly assigned in order of use- this system sucks |
@@ -53,6 +54,7 @@
 | Description | What does the spell do? | This one is applicaple to each spell, and will undoubtably be the longest portion |
 
 ## Class Table
+Main categories that couldn't fit within the spell table.
 | Field | What for | Notes / Possible problems |
 |---|---|---|
 | ClassID | Primary key for the Class table | Classes determine what spells you are allowed to learn |
@@ -60,6 +62,7 @@
 | ClassType | Determines whether this is a class or a subclass | Sometimes a class that isn't supposed to cast very many spells gets a subclass that allows them to cast spells. This should be clarified, so that you don't choose a normal knight, not grab a minor in fire, and find yourself unable shoot lasers when it's time to play. 
 
 ## Leveling table
+Reference for how each level changes your options for spellcasting.
 | Field | What for | Notes / Possible problems |
 |---|---|---|
 | LVID | Primary key for the Leveling table | This will track the spellcasting progression for classes |
@@ -69,12 +72,14 @@
 | SpellsKnown | Number of spells known at this class level | You could exclusively learn 1st level spells, and then theoretically learn them all by 20th level |
 
 ## Book Table
+Reference for when a class was allowed to learn a specific spell.
 | Field | What for | Notes / Possible problems |
 |---|---|---|
 | BookID | Primary key for the Book table | What Dungeons and Dragons book does the spell originate from |
 | BookName | The name of the book associated with the key | This should be in the spell table as well, but we need it as a foreign key |
 
 ## Castable Spells table
+Child of all other tables, meshing them into a long list of instances where spells can be cast.
 | Field | What for | Notes / Possible problems |
 |---|---|---|
 | CSID | Unique identifier for Castable spells | Required, but not very helpful
@@ -83,6 +88,7 @@
 | BookID | Foreign key to relate books | This will determine what exact book allows the class to cast this spell. Usually the origin of the spell or new class. 
 
 ## Calculated Fields
+Useful calculations that can't/shouldn't be stored
 | Field | Equation |
 |---|---|
 | TotalDamage | (Damage + (UpcastDamage(LevelCast - Level)) |
