@@ -109,7 +109,7 @@ The Main table, filled with most data on spells.
 | Field | Type | Null? | Default | Notes / Constraints |
 |---|---|---|---|---|
 | SpellID | INT UNSIGNED | NOT NULL | AUTO_INCREMENT | PK - surrogate, auto-assigned |
-| SpellName | VARCHAR(50) | NOT NULL | - | |
+| SpellName | VARCHAR(50) | NOT NULL | - | AK UNIQUE |
 | SpellLV | TINYINT(9) | NOT NULL | - | |
 | School |VARCHAR(20) | NOT NULL | - | |
 | Effect | VARCHAR(20) | NOT NULL | - | |
@@ -120,14 +120,14 @@ The Main table, filled with most data on spells.
 | Concentration | TINYINT(1) | NOT NULL | 0 | 0=not required, 1=required |
 | Duration | TIME | NULL | 00:00:01 | |
 | CastingTime | VARCHAR(20) | NOT NULL | ACTION | |
-| DamageDie | VARCHAR(20) | NULL | - | CHECK IN(d4, d6, d8, d10, d12, d20) |
+| DamageDie | VARCHAR(20) | NULL | - | CHECK IN('d4', 'd6', 'd8', 'd10', 'd12', 'd20') |
 | DieNum | INT(255) | NULL | - | |
 | DamageType | VARCHAR(20) | NULL | - | |
 | Range | VARCHAR(20) | NOT NULL | SELF | |
 | SpellShape | VARCHAR(20) | NULL | - | |
 | Upcastable | TINYINT(1) | NOT NULL | 1 | 0=not upcastable, 1=upcastable |
 | UpcastDamageNum | TINYINT(255) | NULL | - | |
-| Description | TEXT | NOT NULL | - | |
+| Description | TEXT | NOT NULL | - | AK UNIQUE |
 
 ## Class Table
 Main categories that couldn't fit within the spell table.
