@@ -113,19 +113,20 @@ The Main table, filled with most data on spells.
 | SpellLV | TINYINT(9) | NOT NULL | - | |
 | School |VARCHAR(20) | NOT NULL | - | |
 | Effect | VARCHAR(20) | NOT NULL | - | |
-| SaveDC | VARCHAR(20) | NOT NULL | - | One of these six: STR, DEX, CON, INT, WIS, CHA |
+| SaveDC | VARCHAR(20) | NOT NULL | - | CHECK IN(STR, DEX, CON, INT, WIS, CHA) |
 | Materials | VARCHAR(50) | NULL | - | |
 | Verbal | TINYINT(1) | NOT NULL | 1 | 0=not required, 1=required |
 | Somatic | TINYINT(1) | NOT NULL | 1 | 0=not required, 1=required |
 | Concentration | TINYINT(1) | NOT NULL | 0 | 0=not required, 1=required |
 | Duration | TIME | NULL | 00:00:01 | |
 | CastingTime | VARCHAR(20) | NOT NULL | ACTION | |
-| Damage | TINYINT(255) | NULL | - | Don't know about this one. Dice can't be calculated easily |
+| DamageDie | VARCHAR(20) | NULL | - | CHECK IN(d4, d6, d8, d10, d12, d20 |
+| DieNum | INT(255) | NULL | - | |
 | DamageType | VARCHAR(20) | NULL | - | |
 | Range | VARCHAR(20) | NOT NULL | SELF | |
 | SpellShape | VARCHAR(20) | NULL | - | |
 | Upcastable | TINYINT(1) | NOT NULL | 1 | 0=not upcastable, 1=upcastable |
-| UpcastDamage | TINYINT(255) | NULL | - | Don't know about this one. Dice can't be calculated easily |
+| UpcastDamageNum | TINYINT(255) | NULL | - | |
 | Description | TEXT | NOT NULL | - | |
 
 ## Class Table
@@ -160,7 +161,7 @@ Child of all other tables, meshing them into a long list of instances where spel
 | CSID | INT UNSIGNED | NOT NULL | AUTO_INCREMENT | PK - surrogate, auto-assigned |
 | ClassID | INT UNSIGNED | NOT NULL | AUTO_INCREMENT | FK |
 | SpellID | INT UNSIGNED | NOT NULL | AUTO_INCREMENT | FK |
-| BookID | INT UNSIGNED | NOT NULL | AUTO_INCREMENT | FK |
+| BookID | INT UNSIGNED | NULL | AUTO_INCREMENT | FK |
 
 ## Calculated Fields
 Useful calculations that can't/shouldn't be stored
