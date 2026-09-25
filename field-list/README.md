@@ -113,7 +113,7 @@ The Main table, filled with most data on spells.
 | SpellLV | TINYINT(9) | NOT NULL | - | |
 | School |VARCHAR(20) | NOT NULL | - | |
 | Effect | VARCHAR(20) | NOT NULL | - | |
-| SaveDC | VARCHAR(20) | NOT NULL | - | CHECK IN(STR, DEX, CON, INT, WIS, CHA) |
+| SaveDC | VARCHAR(20) | NOT NULL | - | CHECK IN('STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA') |
 | Materials | VARCHAR(50) | NULL | - | |
 | Verbal | TINYINT(1) | NOT NULL | 1 | 0=not required, 1=required |
 | Somatic | TINYINT(1) | NOT NULL | 1 | 0=not required, 1=required |
@@ -143,7 +143,7 @@ Reference for how each level changes your options for spellcasting.
 |---|---|---|---|---|
 | LVID | INT UNSIGNED | NOT NULL | AUTO_INCREMENT | PK - surrogate, auto-assigned |
 | ClassID | INT UNSIGNED | NOT NULL | 001 | FK - surrogate, auto-assigned |
-| ClassLV | TINYINT(20) | NOT NULL | - | don't allow level 0 |
+| ClassLV | TINYINT(20) | NOT NULL | - | CONSTRAINT >0 |
 | HighestLV |  TINYINT(9) | NOT NULL | - | |
 | SpellsKnown | TINYINT(20) | NOT NULL | - | |
 
