@@ -120,7 +120,7 @@ The Main table, filled with most data on spells.
 | Concentration | TINYINT(1) | NOT NULL | 0 | 0=not required, 1=required |
 | Duration | TIME | NULL | 00:00:01 | |
 | CastingTime | VARCHAR(20) | NOT NULL | ACTION | |
-| DamageDie | VARCHAR(20) | NULL | - | CHECK IN(d4, d6, d8, d10, d12, d20 |
+| DamageDie | VARCHAR(20) | NULL | - | CHECK IN(d4, d6, d8, d10, d12, d20) |
 | DieNum | INT(255) | NULL | - | |
 | DamageType | VARCHAR(20) | NULL | - | |
 | Range | VARCHAR(20) | NOT NULL | SELF | |
