@@ -27,4 +27,4 @@ The Castable spells table was the only thing that didn’t require a search for 
  
 ## 4: Did anything change from your Phase 2 field list when drawing the ERD? What and why?
 
-No. I did not. 
+No. I did not. Because the only goal was to represent what I'd already wrote. I've been trying to think about how this database will operate with as much preemptive structuring as I can. No use in building the foundation while working on the third floor. 
