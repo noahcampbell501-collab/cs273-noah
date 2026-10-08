@@ -23,7 +23,7 @@ Books to castable spells is a one to many optional relationship. While every spe
 
 ## 3: Which relationship was hardest to figure out, and how did you resolve it?
 
-	The Castable spells table was the only thing that didn’t require a search for the definition of what relationship types were classified by, so that probably takes the cake. The many to many relationship needs to be reclassified as a linking table, with mandatory one to many on both sides. 
+The Castable spells table was the only thing that didn’t require a search for the definition of what relationship types were classified by, so that probably takes the cake. The many to many relationship needs to be reclassified as a linking table, with mandatory one to many on both sides. 
  
 ## 4: Did anything change from your Phase 2 field list when drawing the ERD? What and why?
 
