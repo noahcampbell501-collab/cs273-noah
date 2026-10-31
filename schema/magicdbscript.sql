@@ -32,7 +32,7 @@ SpellName VARCHAR(50) NOT NULL,
 SpellLV	TINYINT(9)	NOT NULL,	
 School	VARCHAR(20)	NOT NULL,
 Effect	VARCHAR(20)	NOT NULL,
-SaveDC	VARCHAR(20)	NOT NULL, 
+SaveDC	VARCHAR(20)	NULL, 
 Materials	VARCHAR(50)	NULL,
 Verbal	TINYINT(1)	NOT NULL    DEFAULT 1, -- 0=not required, 1=required
 Somatic	TINYINT(1)	NOT NULL	DEFAULT 1,	-- 0=not required, 1=required
