@@ -13,3 +13,18 @@ This query displays different Spells damage type, dice, and amount of dice rolle
 
 ### Effect_Filter
 This query allows you to list the spells of a certain effect. It can be modified to list any effect.
+
+### School-counter
+This query returns the total number of spells in every school, sorted by largest to smallest.
+
+### Dice-max
+This query which spells rolls the most amount of dice in each level.
+
+### Non-violent
+This query shows every spell that doesn't deal any damage.
+
+### Attack-roll
+This query shows every spell that has an attack roll rather than a saving throw.
+
+### Concentration-count
+This query displays the number of concentration spells in each class. 
